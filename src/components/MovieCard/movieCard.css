@@ -1,0 +1,31 @@
+.movie-card {
+  height: 490px;
+  width: 250px;
+  margin-bottom: 40px;
+}
+
+.poster {
+  margin-bottom: 15px;
+}
+.poster img {
+  width: 250px;
+}
+
+.date-year {
+  color: #868e96;
+  margin-bottom: 15px;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.imdb-rating {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: space-between;
+  width: 70px;
+}

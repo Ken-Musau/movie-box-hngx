@@ -1,0 +1,6 @@
+.grid-4-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  column-gap: 20px;
+  justify-content: space-between;
+}
