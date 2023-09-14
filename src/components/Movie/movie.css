@@ -1,0 +1,11 @@
+.selected-movie {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100px 500px;
+}
+
+.movie-left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

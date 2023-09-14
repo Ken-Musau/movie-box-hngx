@@ -1,10 +1,9 @@
-import Movie from "../MovieCard/MovieCard";
 import React, { useEffect, useState } from "react";
 import "./movieList.css";
+import MovieCard from "../MovieCard/MovieCard";
 
-function MovieList() {
+function MovieList({ setSelectedMovie }) {
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
 
   function handleGetMovie(id) {
     console.log(id);
@@ -25,8 +24,7 @@ function MovieList() {
       .then((movie) => setSelectedMovie(movie))
       .catch((err) => console.error("error:" + err));
   }
-
-  console.log(selectedMovie);
+  // console.log(selectedMovie);
 
   async function fetchMovies() {
     try {
@@ -38,6 +36,8 @@ function MovieList() {
             "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YmRlMDg2N2U3NTBkNTkxOTY2OGJjNGQ4MWU3NDkyZCIsInN1YiI6IjY0ZmY0ZGQ5ZmZjOWRlMGVlMjA4YWM2NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.76fpNoMxPK3_KAKAGbhL2B9NMMx3hUP8vadQydGHD0A",
         },
       };
+
+      // const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
 
       const url =
         "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
@@ -67,7 +67,7 @@ function MovieList() {
   return (
     <div className="grid-4-cols">
       {movies.map((movie) => (
-        <Movie onMovie={movie} key={movie.id} onGetMovie={handleGetMovie} />
+        <MovieCard onMovie={movie} key={movie.id} onGetMovie={handleGetMovie} />
       ))}
     </div>
   );

@@ -2,6 +2,7 @@
   height: 490px;
   width: 250px;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .poster {
@@ -25,7 +26,7 @@
 .imdb-rating {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   justify-content: space-between;
-  width: 70px;
+  width: 80px;
 }
