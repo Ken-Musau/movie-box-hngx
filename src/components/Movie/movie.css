@@ -2,7 +2,6 @@
   max-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  outline: 1px solid red;
   grid-template-rows: repeat(6, 120px);
   column-gap: 100px;
   padding-right: 50px;
