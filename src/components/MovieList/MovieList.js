@@ -37,11 +37,8 @@ function MovieList({ setSelectedMovie }) {
         },
       };
 
-      // const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
-
       const url =
-        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
-      // setIsLoading(true);
+        "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
 
       // Fetch data from the API
       const response = await fetch(url, options);
@@ -49,7 +46,7 @@ function MovieList({ setSelectedMovie }) {
       // Check if the response status code is OK (200)
       if (response.ok) {
         const movies = await response.json();
-        setMovies(movies.results);
+        setMovies(movies.results.slice(0, 10));
         // setIsLoading(false);
       } else {
         console.error("Error:", response.status, response.statusText);

@@ -1,11 +1,57 @@
-.selected-movie {
-  min-height: 100vh;
+.selected-movie-box {
+  max-height: 100vh;
   display: grid;
-  grid-template-columns: 100px 500px;
+  grid-template-columns: 1fr 2fr;
+  outline: 1px solid red;
+  grid-template-rows: repeat(6, 120px);
+  column-gap: 100px;
+  padding-right: 50px;
+  align-items: center;
+}
+
+.selected-movie-box a:link {
+  text-decoration: none;
+  color: #343a40;
+  font-size: 28px;
+}
+
+.selected-movie-box a:visited {
+  color: #343a40;
+}
+
+.movie-tab {
+  background-color: #ffdeeb;
+  height: 100px;
+  align-content: center;
+  border-right: 5px solid #d6336c;
+
+  /* justify-self: center; */
 }
 
 .movie-left-col {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.youtubeTrailer {
+  grid-column: 2 / 3;
+  grid-row: 1/4;
+  margin-top: 100px;
+}
+
+.upcoming-movies {
+  grid-row: 5/6;
+}
+
+.logout-movie-card {
+  grid-row: 6/7;
+}
+
+.movie-details {
+  grid-row: 5 / 6;
+}
+
+.name-date-details {
+  display: flex;
+  gap: 30px;
 }

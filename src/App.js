@@ -22,7 +22,7 @@ function App() {
 
         <Route
           // path={`/movie/${selectedMovie?.title}`} // Use the movie title as a route parameter
-          path="/:title" // Use the movie title as a route parameter
+          path="/movie/:title" // Use the movie title as a route parameter
           element={<Movie />}
         />
       </Routes>
